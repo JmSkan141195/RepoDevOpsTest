@@ -24,7 +24,7 @@ pipeline {
             steps {
                 git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				sh '''
-				mvnw clean compile
+				mvn clean compile
 				'''
             }
 		}
