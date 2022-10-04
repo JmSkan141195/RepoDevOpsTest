@@ -9,7 +9,7 @@ pipeline {
                 /* Testing Jenkins pipeline after pushing */
             }
 		}
-		stage('Running an sh command')
+		stage('Running an Sh command')
 		{
             steps 
 			{
