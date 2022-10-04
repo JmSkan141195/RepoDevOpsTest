@@ -2,12 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Detecting Git Push') 
+		{
             steps {
                 echo 'Testing a Jenkinsfile..'
                 /* Testing Jenkins pipeline after pushing */
             }
-            steps {
+		}
+		stage('Running Sh command')
+		{
+            steps 
+			{
                 sh """date"""
             } 
         }
