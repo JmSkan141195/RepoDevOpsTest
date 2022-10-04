@@ -22,10 +22,9 @@ pipeline {
 		stage('Building project') 
 		{
             steps {
-                //git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
+                git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				echo "-=- packaging project -=-"
-                sh "./mvnw package -DskipTests"
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                sh "./mvnw package"
             }
 		}
     }
