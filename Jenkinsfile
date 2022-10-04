@@ -24,22 +24,5 @@ pipeline {
 				sh './mvnw clean compile'
             }
 		}
-		
-		/*stage('Testing')
-		{
-            steps 
-			{
-                sh './mvnw test'
-            } 
-			
-			post
-			{
-				always 
-				{
-					junit '**/target/TEST-*.xml'
-				}
-			}
-        }*/
-		
     }
 }
