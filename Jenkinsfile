@@ -22,7 +22,7 @@ pipeline {
 		stage('Building project') 
 		{
             steps {
-                git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
+                git 'https://github.com/JmSkan141195/RepoDevOpsTest/tree/Spring_AOP/tpAchatProject.git'
 				echo "-=- packaging project -=-"
                 sh "./mvnw package"
             }
