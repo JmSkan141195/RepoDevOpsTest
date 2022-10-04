@@ -18,7 +18,7 @@ pipeline {
                 '''
             } 
         }
-		
+		/*Try to build project*/
 		stage('Building project') 
 		{
             steps {
