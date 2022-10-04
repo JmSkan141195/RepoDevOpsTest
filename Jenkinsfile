@@ -23,9 +23,9 @@ pipeline {
 		{
             steps {
                 git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
-				sh '''
-				./mvnw clean package
-				'''
+				echo "-=- packaging project -=-"
+                sh "./mvnw package -DskipTests"
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
 		}
     }
