@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Detect Git push') 
+        stage('Detecting Git push') 
 		{
             steps {
                 echo 'Testing a Jenkinsfile..'
                 /* Testing Jenkins pipeline after pushing */
             }
 		}
-		stage('Run an Sh command')
+		stage('Running an Sh command')
 		{
             steps 
 			{
