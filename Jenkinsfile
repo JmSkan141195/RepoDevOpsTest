@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Detect Git Push') 
+        stage('Detect Git push') 
 		{
             steps {
                 echo 'Testing a Jenkinsfile..'
