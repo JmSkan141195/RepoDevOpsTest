@@ -6,6 +6,9 @@ pipeline {
             steps {
                 echo 'Testing a Jenkinsfile..'
                 /* Testing Jenkins pipeline after pushing */
+            }
+            steps {
+                sh """date"""
             } 
         }
     }
