@@ -14,7 +14,7 @@ pipeline {
             steps 
 			{
                 sh '''
-                ./date
+                date
                 '''
             } 
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				sh '''
-				./mvnw clean compile
+				mvnw clean compile
 				'''
             }
 		}
