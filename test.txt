@@ -1,2 +1,2 @@
 This is a file to test build on Jenkins triggred by push on Git
-Now to test with date
+Now to test with date commande sh
