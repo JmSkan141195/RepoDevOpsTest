@@ -25,7 +25,7 @@ pipeline {
                 git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				echo "-=- packaging project -=-"
                 sh '''
-                ./mvnw package -DskipTests
+                ./mvnw package
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
                 '''
             }
