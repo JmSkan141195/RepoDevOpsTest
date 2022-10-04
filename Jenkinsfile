@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Testing a Jenkinsfile..'
-                /* To test Jenkins pipeline after pushing */
+                /* Testing Jenkins pipeline after pushing */
             } 
         }
     }
