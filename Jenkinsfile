@@ -37,7 +37,9 @@ pipeline {
             {
                 success
                 {
+					echo 'Tests success ! Getting reports'
                     junit '**/target/surefire-reports/TEST-*.xml'
+					echo 'Exporting JAR'
                     archiveArtifacts 'target/*.jar'
                 }
             }
