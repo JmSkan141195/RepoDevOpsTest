@@ -30,9 +30,7 @@ pipeline {
                 echo 'Getting repo from Github'
                 git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				echo 'Run Maven Wrapper'
-				sh '''
-				mvnw -Dmaven.test.failure.ignore=true clean package
-				'''
+				sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
             }
 
             post
