@@ -27,13 +27,19 @@ pipeline {
                 '''
             } 
         }
+		
+		stage ('Git Checkout') 
+		{
+			steps 
+			{
+				git branch: 'main', url: 'https://<token>@github.com/username/repoName.git'
+			}
+		}
+		
 		/*Try to build project*/
 		stage('Building project') 
 		{
             steps {
-            /*Get repo from github*/
-                echo 'Getting repo from Github'
-                git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				echo 'Run Maven Wrapper'
 				sh '''
 				mvn -Dmaven.test.failure.ignore=true clean package
