@@ -28,7 +28,7 @@ pipeline {
             steps {
             /*Get repo from github*/
                 echo 'Getting repo from Github'
-                git 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
+                git branch: 'SpringAOC', credentialsId: '0112be30-3fe0-41ee-b428-59aac588feaa', url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
 				echo 'Run Maven Wrapper'
 				sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
             }
