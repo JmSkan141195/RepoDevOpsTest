@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9604e720-e1cf-46c6-86ca-7bf7744d03e4" name="Changes" comment="try build 3" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Spring_AOP" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FfyHyT5RDFniC94AMTzpK77k8F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9604e720-e1cf-46c6-86ca-7bf7744d03e4" name="Changes" comment="" />
+      <created>1664897355625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664897355625</updated>
+    </task>
+    <task id="LOCAL-00001" summary="try build">
+      <created>1664897550986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664897550986</updated>
+    </task>
+    <task id="LOCAL-00002" summary="try build 1">
+      <created>1664897759193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664897759193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="try build 2">
+      <created>1664897831555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664897831555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="try build 3">
+      <created>1664897902755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664897902755</updated>
+    </task>
+    <task id="LOCAL-00005" summary="try build 3">
+      <created>1664898064225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664898064225</updated>
+    </task>
+    <task id="LOCAL-00006" summary="try build 4">
+      <created>1664898488957</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664898488958</updated>
+    </task>
+    <task id="LOCAL-00007" summary="try build 5">
+      <created>1664898837492</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664898837492</updated>
+    </task>
+    <task id="LOCAL-00008" summary="try build 8">
+      <created>1664898966742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664898966742</updated>
+    </task>
+    <task id="LOCAL-00009" summary="try build 9">
+      <created>1664899059101</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664899059101</updated>
+    </task>
+    <task id="LOCAL-00010" summary="try build 10">
+      <created>1664899246226</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664899246226</updated>
+    </task>
+    <task id="LOCAL-00011" summary="try build 11">
+      <created>1664899342330</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664899342330</updated>
+    </task>
+    <task id="LOCAL-00012" summary="try build 11">
+      <created>1664899756837</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664899756837</updated>
+    </task>
+    <task id="LOCAL-00013" summary="try build 12">
+      <created>1664899878539</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664899878539</updated>
+    </task>
+    <task id="LOCAL-00014" summary="try build 13">
+      <created>1664900100789</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664900100789</updated>
+    </task>
+    <task id="LOCAL-00015" summary="try build 1">
+      <created>1664900378702</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664900378702</updated>
+    </task>
+    <task id="LOCAL-00016" summary="try build 2">
+      <created>1664974384212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664974384212</updated>
+    </task>
+    <task id="LOCAL-00017" summary="try build 3">
+      <created>1664974889368</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664974889368</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="try build" />
+    <MESSAGE value="try build 4" />
+    <MESSAGE value="try build 5" />
+    <MESSAGE value="try build 8" />
+    <MESSAGE value="try build 9" />
+    <MESSAGE value="try build 10" />
+    <MESSAGE value="try build 11" />
+    <MESSAGE value="try build 12" />
+    <MESSAGE value="try build 13" />
+    <MESSAGE value="try build 1" />
+    <MESSAGE value="try build 2" />
+    <MESSAGE value="try build 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="try build 3" />
+  </component>
+</project>
