@@ -32,7 +32,7 @@ pipeline {
 		{
 			steps 
 			{
-				git url: "https://github.com/JmSkan141195/RepoDevOpsTest.git",
+				git url: "git@github.com:JmSkan141195/RepoDevOpsTest.git",
                 branch: 'Spring_AOP'
 			}
 		}
