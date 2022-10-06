@@ -28,12 +28,12 @@ pipeline {
             } 
         }
 		
-		stage ('Git Repo Checkout') 
+		stage ('Git Checkout') 
 		{
 			steps 
 			{
-				git url: "git@github.com:JmSkan141195/RepoDevOpsTest.git",
-                branch: 'Spring_AOP'
+				
+
 			}
 		}
 		
