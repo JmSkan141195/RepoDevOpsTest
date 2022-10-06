@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Build config">
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Junit tests config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" afterDir="false" />
     </list>
@@ -12,6 +12,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +53,53 @@
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SimpleJUnitTest.test_JUnit">
+    <configuration name="SimpleJUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepoDevOpsTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esprit.examen.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
+      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.SimpleJUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleJUnitTest.test_JUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepoDevOpsTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esprit.examen.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
+      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.SimpleJUnitTest" />
+      <option name="METHOD_NAME" value="test_JUnit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StockServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepoDevOpsTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esprit.examen.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
+      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.StockServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TpAchatProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tpAchatProject" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.examen.TpAchatProjectApplication" />
@@ -54,6 +107,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit" />
+        <item itemvalue="JUnit.SimpleJUnitTest" />
+        <item itemvalue="JUnit.StockServiceImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665095152074</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Junit tests config">
+      <created>1665095416920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665095416921</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +191,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ok" />
     <MESSAGE value="Build config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build config" />
+    <MESSAGE value="Junit tests config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Junit tests config" />
   </component>
 </project>
