@@ -12,5 +12,4 @@ com\esprit\examen\SpringFoxSwaggerConfig.class
 com\esprit\examen\entities\DetailFacture.class
 com\esprit\examen\entities\Produit.class
 com\esprit\examen\repositories\ProduitRepository.class
-com\esprit\examen\TpStockProjectApplication.class
 com\esprit\examen\repositories\StockRepository.class

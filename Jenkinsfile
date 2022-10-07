@@ -1,13 +1,17 @@
 pipeline {
-	tools 
-	{						
+    environment
+    {
+        PATH = "/usr/share/maven:$PATH"
+    }
+	tools
+	{
 		maven 'M2_HOME'
 		jdk 'JAVA_HOME'
 	}
     agent any
 
     stages {
-        stage('Detecting Git push') 
+        stage('Detecting Git push')
 		{
 		/*
 		Nothing to do here as we already configured this in Jenkins
@@ -17,44 +21,56 @@ pipeline {
                 echo 'Testing a Jenkinsfile...'
             }
 		}
-		
+
 		stage('Running an Sh command')
 		{
-            steps 
+            steps
 			{
                 sh '''
                 date
                 '''
-            } 
+            }
         }
-		
-		stage ('Git Checkout') 
-		{
-			steps 
-			{
-				
 
+		stage ('Git Checkout ...')
+		{
+			steps
+			{
+			    git branch: 'Spring_AOP', credentialsId: '0112be30-3fe0-41ee-b428-59aac588feaa', url: 'https://github.com/JmSkan141195/RepoDevOpsTest'
+			     echo 'Checkout Complete ...'
 			}
 		}
-		
-		/*Try to build project*/
-		stage('Building project') 
-		{
-            steps {
-				echo 'Run Maven Wrapper'
-				sh '''
-				mvn -Dmaven.test.failure.ignore=true clean package
-				'''
-            }
 
-            post
-            {
+		stage ('Unit Tests ...')
+		{
+		    steps
+		    {
+		        sh "mvn test"
+		    }
+
+		    post
+		    {
+		        success
+		        {
+		            echo 'Test Complete ...'
+		        }
+		    }
+		}
+
+		stage ('Building ...')
+		{
+			steps
+			{
+			    sh "mvn clean package"
+			}
+
+			post
+			{
                 success
                 {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
+                    echo 'Build Succeded ...'
                 }
-            }
+		    }
 		}
     }
 }
