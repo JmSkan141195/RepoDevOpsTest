@@ -75,22 +75,5 @@ pipeline {
 		        }
 		    }
 		}
-
-		stage ('Building ...')
-        		{
-        			steps
-        			{
-        			    echo 'Build Start ...'
-        			    sh "mvn clean package install"
-        			}
-
-        			post
-        			{
-                        success
-                        {
-                            echo 'Build Completed with Success ...'
-                        }
-        		    }
-        		}
     }
 }
