@@ -22,7 +22,24 @@ pipeline {
             }
 		}
 
-		stage('Running an Sh command')
+        stage ('Building ...')
+		{
+			steps
+			{
+			    echo 'Build Start ...'
+			    sh "mvn clean package"
+			}
+
+			post
+			{
+                success
+                {
+                    echo 'Build Completed with Success ...'
+                }
+		    }
+		}
+
+		/*stage('Running an Sh command')
 		{
             steps
 			{
@@ -30,7 +47,7 @@ pipeline {
                 date
                 '''
             }
-        }
+        }*/
 
 		stage ('Git Checkout ...')
 		{
@@ -60,20 +77,20 @@ pipeline {
 		}
 
 		stage ('Building ...')
-		{
-			steps
-			{
-			    echo 'Build Start ...'
-			    sh "mvn clean package"
-			}
+        		{
+        			steps
+        			{
+        			    echo 'Build Start ...'
+        			    sh "mvn clean package install"
+        			}
 
-			post
-			{
-                success
-                {
-                    echo 'Build Completed with Success ...'
-                }
-		    }
-		}
+        			post
+        			{
+                        success
+                        {
+                            echo 'Build Completed with Success ...'
+                        }
+        		    }
+        		}
     }
 }
