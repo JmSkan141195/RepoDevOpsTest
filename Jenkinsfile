@@ -10,18 +10,8 @@ pipeline {
 	}
     agent any
 
-    stages {
-        stage('Git Push')
-		{
-		/*
-		Nothing to do here as we already configured this in Jenkins
-		Poll SCM --> Ticked
-		*/
-            steps {
-                echo 'Running the Jenkinsfile...'
-            }
-		}
-
+    stages
+    {
         stage ('Building ...')
 		{
 			steps
@@ -38,16 +28,6 @@ pipeline {
                 }
 		    }
 		}
-
-		/*stage('Running an Sh command')
-		{
-            steps
-			{
-                sh '''
-                date
-                '''
-            }
-        }*/
 
 		stage ('Git Checkout ...')
 		{
