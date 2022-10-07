@@ -11,14 +11,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Detecting Git push')
+        stage('Git Push')
 		{
 		/*
 		Nothing to do here as we already configured this in Jenkins
 		Poll SCM --> Ticked
 		*/
             steps {
-                echo 'Testing a Jenkinsfile...'
+                echo 'Running the Jenkinsfile...'
             }
 		}
 
@@ -36,8 +36,9 @@ pipeline {
 		{
 			steps
 			{
+			    echo 'Checkout Start ...'
 			    git branch: 'Spring_AOP', credentialsId: '0112be30-3fe0-41ee-b428-59aac588feaa', url: 'https://github.com/JmSkan141195/RepoDevOpsTest'
-			     echo 'Checkout Complete ...'
+			    echo 'Checkout Complete ...'
 			}
 		}
 
@@ -45,6 +46,7 @@ pipeline {
 		{
 		    steps
 		    {
+		        echo 'Unit Tests Start ...'
 		        sh "mvn test"
 		    }
 
@@ -61,6 +63,7 @@ pipeline {
 		{
 			steps
 			{
+			    echo 'Build Start ...'
 			    sh "mvn clean package"
 			}
 
@@ -68,7 +71,7 @@ pipeline {
 			{
                 success
                 {
-                    echo 'Build Succeded ...'
+                    echo 'Build Completed with Success ...'
                 }
 		    }
 		}
