@@ -10,7 +10,7 @@ pipeline {
     environment
     {
         PATH = "/usr/share/maven:$PATH"
-	dockerhub = credentials('dockerhub')
+	dockerhub = credentials('dockerhub-credentials-new-account')
     }
 	
     
@@ -66,7 +66,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting build Docker image'
-			   sh "docker build -t skimpy/devopsspringapp:1.0.SNAPSHOT ."
+			   sh "docker build -t jouinimskander/devopsspringapp:1.0.SNAPSHOT ."
 		    }
 		    post
 		    {
