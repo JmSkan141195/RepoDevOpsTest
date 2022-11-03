@@ -65,8 +65,27 @@ pipeline {
 	    {
 		    steps
 		    {
-			   echo 'Starting build Docker image' 
+			   echo 'Starting build Docker image'
+			   sh "docker build -t skimpy/devopsspringapp:1.0.SNAPSHOT ."
 		    }
+		    post
+		    {
+			    success
+			    {
+				    echo 'Image Build success !'
+			    }
+		    }
+		    
+		    
+	    }
+	    
+	    stage ('Pushing Image - Docker')
+	    {
+		    steps
+		    {
+			   echo 'Starting push Docker image'
+		    }
+		    
 		    
 		    
 	    }
