@@ -1,14 +1,19 @@
 pipeline {
-    environment
-    {
-        PATH = "/usr/share/maven:$PATH"
-    }
-	tools
+    agent any
+	
+    tools
 	{
 		maven 'M2_HOME'
 		jdk 'JAVA_HOME'
 	}
-    agent any
+	
+    environment
+    {
+        PATH = "/usr/share/maven:$PATH"
+	dockerhub = credentials('dockerhub')
+    }
+	
+    
 
     stages
     {
@@ -38,7 +43,7 @@ pipeline {
 			    echo 'Checkout Complete ...'
 			}
 		}
-
+	 
 		stage ('Unit Tests ...')
 		{
 		    steps
@@ -55,5 +60,15 @@ pipeline {
 		        }
 		    }
 		}
+	    
+	    stage ('Build Image - Docker')
+	    {
+		    steps
+		    {
+			   echo 'Starting build Docker image' 
+		    }
+		    
+		    
+	    }
     }
 }
