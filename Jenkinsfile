@@ -61,6 +61,25 @@ pipeline {
 		    }
 		}
 	    
+	    
+	    stage('Login to Docker Hub') 
+	    {      	
+    		steps
+		    {                       	
+			sh 'echo $dockerhub_PSW | sudo docker login -u $dockerhub_USR --password-stdin'                		      
+		    }
+		    post
+		    {
+			    success
+			    {
+				    echo 'Docker Hub Login Completed !'
+			    }
+		    }
+				    
+	    }   
+	    
+	    
+	    
 	    stage ('Build Image - Docker')
 	    {
 		    steps
