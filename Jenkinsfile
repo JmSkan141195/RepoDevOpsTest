@@ -66,7 +66,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting build Docker image'
-			   sh "docker build -t skimpy/devopsspringapp:1.0.SNAPSHOT ."
+			   sh "sudo docker build -t skimpy/devopsspringapp:1.0.SNAPSHOT ."
 		    }
 		    post
 		    {
