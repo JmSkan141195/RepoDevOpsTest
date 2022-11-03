@@ -66,7 +66,7 @@ pipeline {
 	    {      	
     		steps
 		    {                       	
-			sh 'echo $dockerhub_PSW | docker login -u jouinimskander -p JJmmii***141195               		      
+			sh 'echo $dockerhub_PSW | docker login -u jouinimskander -p JJmmii***141195'               		      
 		    }
 		    post
 		    {
