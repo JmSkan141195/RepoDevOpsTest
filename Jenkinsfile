@@ -11,7 +11,7 @@ pipeline {
     {
         PATH = "/usr/share/maven:$PATH"
 	dockerhub = credentials('dockerhub')
-	PATH_DFILE = "/var/lib/jenkins/workspace/SprinAOC/target/Dockerfile"
+	PATH_DFILE = "/var/lib/jenkins/workspace/SpringAOC/target/Dockerfile"
     }
 	
     
