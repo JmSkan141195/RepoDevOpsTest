@@ -10,7 +10,7 @@ pipeline {
     environment
     {
         PATH = "/usr/share/maven:$PATH"
-	DOCKERHUB_CREDS = credentials('dockerhub-credentials-new-account')
+	dockerhub = credentials('dockerhub-credentials-new-account')
     }
 	
     
@@ -66,7 +66,7 @@ pipeline {
 	    {      	
     		steps
 		    {                       	
-			sh 'echo $dockerhub_PSW | docker login -u DOCKERHUB_CREDS_USR -p DOCKERHUB_CREDS_PSW'               		      
+			sh 'echo $dockerhub_PSW | docker login -u dockerhub_USR -p dockerhub_PSW'               		      
 		    }
 		    post
 		    {
@@ -103,6 +103,13 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting push Docker image'
+		    }
+		    post
+		    {
+			    success
+			    {
+				    echo 'Image Pushed to Docker hub succeeded !'
+			    }
 		    }
 		    
 		    
