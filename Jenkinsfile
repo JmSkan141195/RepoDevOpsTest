@@ -10,7 +10,7 @@ pipeline {
     environment
     {
         PATH = "/usr/share/maven:$PATH"
-	
+	DOCKERHUB_CREDS = credentials('dockerhub-credentials-new-account')
     }
 	
     
@@ -66,7 +66,7 @@ pipeline {
 	    {      	
     		steps
 		    {                       	
-			sh 'echo $dockerhub_PSW | docker login -u jouinimskander -p JJmmii***141195'               		      
+			sh 'echo $dockerhub_PSW | docker login -u DOCKERHUB_CREDS_USR -p DOCKERHUB_CREDS_PSW'               		      
 		    }
 		    post
 		    {
