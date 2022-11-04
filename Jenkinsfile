@@ -103,7 +103,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting push Docker image'
-			    withCredentials([string(credentialsId: 'dockerhub', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
+			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
 			    {
 				    sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"
 			    }
