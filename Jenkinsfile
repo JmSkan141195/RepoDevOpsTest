@@ -11,7 +11,6 @@ pipeline {
     {
         PATH = "/usr/share/maven:$PATH"
 	dockerhub = credentials('dockerhub')
-	PATH_DFILE = "/var/lib/jenkins/workspace/SpringAOC/target/Dockerfile"
     }
 	
     
@@ -86,8 +85,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting build Docker image'
-			   //sh "docker build -f /var/lib/jenkins/workspace/springAOC/Dockerfile -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
-			    sh "docker build -f ${PATH_DFILE} -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
+			    sh "docker build -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
 		    }
 		    post
 		    {
