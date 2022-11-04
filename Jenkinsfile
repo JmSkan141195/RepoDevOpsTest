@@ -10,7 +10,7 @@ pipeline {
     environment
     {
         PATH = "/usr/share/maven:$PATH"
-	DOCKER_CREDS = credentials('dockerhub')
+	dockerhub = credentials('dockerhub')
     }
 	
     
@@ -66,7 +66,7 @@ pipeline {
 	    {      	
     		steps
 		    {                       	
-			sh "docker login -u DOCKER_CREDS_USR -p DOCKER_CREDS_PSW"               		      
+			sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"               		      
 		    }
 		    post
 		    {
@@ -103,9 +103,9 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting push Docker image'
-			    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub_credentials')]) 
+			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
 			    {
-				    sh "docker login -u jouinimskander -p ${dockerhub_credentials}"
+				    sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"
 			    }
 			    sh "docker push jouinimskander/springappdevops" 
 		    }
