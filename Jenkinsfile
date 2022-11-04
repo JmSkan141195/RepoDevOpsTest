@@ -85,7 +85,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting build Docker image'
-			   sh "docker build -t jouinimskander/springdevopsapp:1.0.SNAPSHOT -f /var/lib/jenkins/workspace/springAOC"
+			   sh "docker build -f /var/lib/jenkins/workspace/springAOC/Dockerfile -t jouinimskander/springdevopsapp:1.0.SNAPSHOT"
 		    }
 		    post
 		    {
