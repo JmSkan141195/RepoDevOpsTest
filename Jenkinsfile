@@ -56,7 +56,7 @@ pipeline {
 		    {
 		        success
 		        {
-		            echo 'Test Complete ...'
+		            echo 'Unit Tests Complete ...'
 		        }
 		    }
 		}
