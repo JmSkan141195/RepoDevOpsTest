@@ -10,6 +10,7 @@ pipeline {
     environment
     {
         PATH = "/usr/share/maven:$PATH"
+	DOCKER_CREDS = credentials('DOCKER_CREDENTIALS')
     }
 	
     
@@ -26,14 +27,14 @@ pipeline {
 
 			post
 			{
-                success
-                {
-                    echo 'Build Completed with Success ...'
-                }
-		    }
+				success
+                		{
+                    			echo 'Build Completed with Success ...'
+				}
+		    	}
 		}
 
-		stage ('Git Checkout ...')
+	stage ('Git Checkout ...')
 		{
 			steps
 			{
@@ -43,7 +44,7 @@ pipeline {
 			}
 		}
 	 
-		stage ('Unit Tests ...')
+	stage ('Unit Tests ...')
 		{
 		    steps
 		    {
@@ -65,7 +66,7 @@ pipeline {
 	    {      	
     		steps
 		    {                       	
-			sh 'echo $dockerhub_PSW | docker login -u jouinimskander -p JJmmii***141195'               		      
+			sh "docker login -u DOCKER_CREDS_USR -p DOCKER_CREDS_PSW"               		      
 		    }
 		    post
 		    {
@@ -84,7 +85,7 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting build Docker image'
-			   sh "docker build -t jouinimskander/devopsspringapp:1.0.SNAPSHOT ."
+			   sh "docker build -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
 		    }
 		    post
 		    {
@@ -102,6 +103,11 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting push Docker image'
+			    withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDENTIALS', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
+			    {
+				    sh "docker login -u jouinimskander -p ${dockerhub_pwd}"
+			    }
+			    sh "docker push jouinimskander/springappdevops" 
 		    }
 		    post
 		    {
