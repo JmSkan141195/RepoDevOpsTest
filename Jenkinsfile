@@ -21,6 +21,7 @@ pipeline {
 		{
 			steps
 			{
+			    echo 'Git project recovered with success !'
 			    echo 'Build Start ...'
 			    sh "mvn clean install -DskipTests"
 			}
@@ -33,16 +34,6 @@ pipeline {
 				}
 		    	}
 		}
-
-	//stage ('Git Checkout ...')
-		//{
-			//steps
-			//{
-			  //  echo 'Checkout Start ...'
-			   // git branch: 'MohammedIskanderJOUINI', credentialsId: '0112be30-3fe0-41ee-b428-59aac588feaa', url: 'https://github.com/JmSkan141195/RepoDevOpsTest'
-			    //echo 'Checkout Complete ...'
-			//}
-		//}
 	 
 	stage ('Unit Tests ...')
 		{
