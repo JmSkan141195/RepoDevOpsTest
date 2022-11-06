@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (deleted all added magasin entity files)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" afterDir="false" />
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (tests + jacoco)">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/CategorieProduitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/CategorieProduitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FactureRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FactureRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FournisseurRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FournisseurRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ProduitRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ProduitRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ReglementRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ReglementRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/SecteurActiviteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/SecteurActiviteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/StockRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/StockRestController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sirin/Desktop/tpAchatProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/sirin/Desktop/tpAchatProject",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.esprit.examen.controllers" />
@@ -315,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667768210820</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Updated Spring boot (tests + jacoco)">
+      <created>1667773050072</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667773050072</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +356,8 @@
     <MESSAGE value="Updated Spring boot (correction suite au bilan SonarQube)" />
     <MESSAGE value="Updated Spring boot (fix errors mentioned in SonarQube report)" />
     <MESSAGE value="Updated Spring boot (deleted all added magasin entity files)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (deleted all added magasin entity files)" />
+    <MESSAGE value="Updated Spring boot (tests + jacoco)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (tests + jacoco)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
