@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (fix errors mentioned in SonarQube report)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" afterDir="false" />
-    </list>
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (deleted all added magasin entity files)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -275,7 +272,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667767176984</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updated Spring boot (fix errors mentioned in SonarQube report)">
+      <created>1667767459420</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667767459420</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated Spring boot (deleted all added magasin entity files)">
+      <created>1667768028138</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667768028138</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +315,8 @@
     <MESSAGE value="Updated Spring boot (partie test) // ajout magasin" />
     <MESSAGE value="Updated Spring boot (correction suite au bilan SonarQube)" />
     <MESSAGE value="Updated Spring boot (fix errors mentioned in SonarQube report)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (fix errors mentioned in SonarQube report)" />
+    <MESSAGE value="Updated Spring boot (deleted all added magasin entity files)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (deleted all added magasin entity files)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
