@@ -48,6 +48,29 @@ pipeline {
 				}
 		    	}
 	    }
+	    stage ('SonarQube Code Quality Check')
+	    {
+		    steps
+		    {
+			    script
+			    {
+				    withSonarQubeEnv('SonarQubeServer')
+				    {
+					    sh "mvn sonar:sonar"
+				    }
+			    }
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Compilation Completed with Success ...'
+				}
+		    	}
+	    }
+	    
+	    
+	    
         stage ('Building ...')
 		{
 			steps
@@ -101,7 +124,7 @@ pipeline {
 	    
 	    
 	    
-	    stage ('Build Image - Docker')
+	    /*stage ('Build Image - Docker')
 	    {
 		    steps
 		    {
@@ -136,10 +159,7 @@ pipeline {
 			    {
 				    echo 'Image Pushed to Docker hub succeeded !'
 			    }
-		    }
-		    
-		    
-		    
-	    }
+		    } 
+	    }*/
     }
 }
