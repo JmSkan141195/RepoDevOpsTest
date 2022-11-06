@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (tests + jacoco)">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/CategorieProduitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/CategorieProduitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FactureRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FactureRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FournisseurRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/FournisseurRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ProduitRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ProduitRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ReglementRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/ReglementRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/SecteurActiviteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/SecteurActiviteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/StockRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/esprit/examen/controllers/StockRestController.class" afterDir="false" />
-    </list>
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (maven-surefire-plugin)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,7 +318,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667773050072</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Updated Spring boot (maven-surefire-plugin)">
+      <created>1667773535911</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667773535911</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated Spring boot (maven-surefire-plugin)">
+      <created>1667773825836</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667773825836</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +363,8 @@
     <MESSAGE value="Updated Spring boot (fix errors mentioned in SonarQube report)" />
     <MESSAGE value="Updated Spring boot (deleted all added magasin entity files)" />
     <MESSAGE value="Updated Spring boot (tests + jacoco)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (tests + jacoco)" />
+    <MESSAGE value="Updated Spring boot (maven-surefire-plugin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (maven-surefire-plugin)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
