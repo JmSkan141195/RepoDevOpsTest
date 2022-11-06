@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Jenkinsfile">
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (correction suite au bilan SonarQube)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/entities/Magasin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/repositories/MagasinRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/services/IMagasinService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/services/MagasinServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/CategorieProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/CategorieProduitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FactureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FactureRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/OperateurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/OperateurController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ProduitRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ProduitRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ReglementRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ReglementRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/SecteurActiviteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/SecteurActiviteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/StockRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/StockRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,6 +64,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/sirin/Desktop/tpAchatProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -65,7 +79,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleJUnitTest.test_JUnit">
+  <component name="RunManager" selected="Unknown.TpAchatProjectApplication505060765">
     <configuration name="SimpleJUnitTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage">
         <pattern>
@@ -126,17 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StockServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="RepoDevOpsTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.esprit.examen.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
-      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.StockServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpringBootWithUnitTestApplicationTests" />
+      <option name="METHOD_NAME" value="ajouterMagasinTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,7 +163,6 @@
         <item itemvalue="JUnit.SimpleJUnitTest" />
         <item itemvalue="JUnit.SimpleJUnitTest (1)" />
         <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit" />
-        <item itemvalue="JUnit.StockServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665150461140</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated Spring boot (partie test) // ajout magasin">
+      <created>1667673714939</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667673714939</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,9 +293,12 @@
     <MESSAGE value="Build config" />
     <MESSAGE value="Junit tests config" />
     <MESSAGE value="Updated Jenkinsfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkinsfile" />
+    <MESSAGE value="Updated Spring boot (partie test) // ajout magasin" />
+    <MESSAGE value="Updated Spring boot (correction suite au bilan SonarQube)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (correction suite au bilan SonarQube)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SimpleJUnitTest.ic" NAME="SimpleJUnitTest Coverage Results" MODIFIED="1665097051621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.esprit.examen.services.*</FILTER>
     </SUITE>
