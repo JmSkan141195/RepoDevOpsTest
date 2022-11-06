@@ -53,7 +53,7 @@ pipeline {
 			steps
 			{
 			    echo 'Build Start ...'
-			    sh "mvn package -DskipTests"
+			    sh "mvn package -Dmaven.main.skip -DskipTests"
 			}
 
 			post
