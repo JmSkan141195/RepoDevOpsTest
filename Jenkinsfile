@@ -17,12 +17,66 @@ pipeline {
 
     stages
     {
+	stage ('MVN Clean')
+	    {
+		    steps
+		    {
+			    echo 'Git project recovered with success !'
+			    echo 'Cleaning'
+			    sh "mvn clean"
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Clean Completed with Success ...'
+				}
+		    	}
+	    }
+	    stage ('MVN Compile')
+	    {
+		    steps
+		    {
+			    echo 'Compiling'
+			    sh "mvn compile"
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Compilation Completed with Success ...'
+				}
+		    	}
+	    }
+	    stage ('SonarQube Code Quality Check')
+	    {
+		    steps
+		    {
+			    script
+			    {
+				    withSonarQubeEnv('SonarQubeServer')
+				    {
+					    sh "mvn sonar:sonar"
+				    }
+			    }
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Compilation Completed with Success ...'
+				}
+		    	}
+	    }
+	    
+	    
+	    
         stage ('Building ...')
 		{
 			steps
 			{
 			    echo 'Build Start ...'
-			    sh "mvn clean install -DskipTests"
+			    sh "mvn package -Dmaven.main.skip -DskipTests"
 			}
 
 			post
@@ -32,16 +86,6 @@ pipeline {
                     			echo 'Build Completed with Success ...'
 				}
 		    	}
-		}
-
-	stage ('Git Checkout ...')
-		{
-			steps
-			{
-			    echo 'Checkout Start ...'
-			    git branch: 'MohammedIskanderJOUINI', credentialsId: '0112be30-3fe0-41ee-b428-59aac588feaa', url: 'https://github.com/JmSkan141195/RepoDevOpsTest'
-			    echo 'Checkout Complete ...'
-			}
 		}
 	 
 	stage ('Unit Tests ...')
@@ -80,7 +124,7 @@ pipeline {
 	    
 	    
 	    
-	    stage ('Build Image - Docker')
+	    /*stage ('Build Image - Docker')
 	    {
 		    steps
 		    {
@@ -115,10 +159,7 @@ pipeline {
 			    {
 				    echo 'Image Pushed to Docker hub succeeded !'
 			    }
-		    }
-		    
-		    
-		    
-	    }
+		    } 
+	    }*/
     }
 }
