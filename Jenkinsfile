@@ -17,13 +17,43 @@ pipeline {
 
     stages
     {
+	stage ('MVN Clean')
+	    {
+		    steps
+		    {
+			    echo 'Git project recovered with success !'
+			    echo 'Cleaning'
+			    sh "mvn clean"
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Clean Completed with Success ...'
+				}
+		    	}
+	    }
+	    stage ('MVN Compile')
+	    {
+		    steps
+		    {
+			    echo 'Compiling'
+			    sh "mvn compile"
+		    }
+		    post
+			{
+				success
+                		{
+                    			echo 'Compilation Completed with Success ...'
+				}
+		    	}
+	    }
         stage ('Building ...')
 		{
 			steps
 			{
-			    echo 'Git project recovered with success !'
 			    echo 'Build Start ...'
-			    sh "mvn clean package -DskipTests"
+			    sh "mvn package -DskipTests"
 			}
 
 			post
