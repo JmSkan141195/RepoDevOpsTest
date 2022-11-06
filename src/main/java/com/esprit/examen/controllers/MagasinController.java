@@ -34,7 +34,9 @@ public class MagasinController {
 	@PostMapping("/add-magasin")
 	@ResponseBody
 	public Magasin addMagasin(@RequestBody Magasin mag) {
-		Magasin magasin = magasinService.addMagasin(mag);
+		Magasin magasin = new Magasin();
+		magasin = mag;
+		magasinService.addMagasin(magasin);
 		return magasin;
 	}
 
