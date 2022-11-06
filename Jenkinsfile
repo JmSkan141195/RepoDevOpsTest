@@ -1,4 +1,5 @@
-pipeline {
+pipeline 
+{
     agent any
 	
     tools
@@ -17,12 +18,12 @@ pipeline {
 
     stages
     {
-        stage ('Building ...')
+        stage ('Building project')
 		{
 			steps
 			{
 			    echo 'Git project recovered with success !'
-			    echo 'Build Start ...'
+			    echo 'Build Started'
 			    sh "mvn clean package -DskipTests"
 			}
 
@@ -30,16 +31,16 @@ pipeline {
 			{
 				success
                 		{
-                    			echo 'Build Completed with Success ...'
+                    			echo 'Build Completed with Success'
 				}
 		    	}
 		}
 	 
-	stage ('Unit Tests ...')
+	stage ('Unit Tests - JUnit')
 		{
 		    steps
 		    {
-		        echo 'Unit Tests Start ...'
+		        echo 'Unit Tests Started'
 		        sh "mvn test"
 		    }
 
@@ -47,69 +48,54 @@ pipeline {
 		    {
 		        success
 		        {
-		            echo 'Unit Tests Complete ...'
+		            echo 'Unit Tests Completed with success'
 		        }
 		    }
 		}
 	    
 	    
-	    stage('Login to Docker Hub') 
+	    stage('Docker (Image Build + Push') 
 	    {      	
     		steps
-		    {                       	
-			sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"               		      
-		    }
-		    post
 		    {
-			    success
+			    step('Docker Login')
 			    {
-				    echo 'Docker Hub Login Completed !'
+				 sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"   
 			    }
-		    }
-				    
-	    }   
-	    
-	    
-	    
-	    stage ('Build Image - Docker')
-	    {
-		    steps
-		    {
-			   echo 'Starting build Docker image'
-			    sh "docker build -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
-		    }
-		    post
-		    {
-			    success
+			    post
 			    {
-				    echo 'Image Build success !'
+				    success
+				    {
+					    echo 'Docker Hub Login Completed !'
+				    }
 			    }
-		    }
-		    
-		    
-	    }
-	    
-	    stage ('Pushing Image - Docker')
-	    {
-		    steps
-		    {
-			   echo 'Starting push Docker image'
-			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
+			    step('Build Image - Docker')
 			    {
-				    sh "docker login -u $dockerhub_USR -p $dockerhub_PSW"
+				 echo 'Starting build Docker image'
+				 sh "docker build -t jouinimskander/springdevopsapp:1.0.SNAPSHOT ."
 			    }
-			    sh "docker push jouinimskander/springdevopsapp" 
-		    }
-		    post
-		    {
-			    success
+			    post
 			    {
-				    echo 'Image Pushed to Docker hub succeeded !'
+				    success
+				    {
+					    echo 'Image Build success !'
+				    }
 			    }
-		    }
-		    
-		    
-		    
+			    step('Pushing Image - Docker')
+			    {
+				 echo 'Starting push Docker image'
+				 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhub_pwd', usernameVariable: 'dockerhub_usr')]) 
+				    {
+					    sh "docker push jouinimskander/springdevopsapp"
+				    }
+				    post
+				    {
+					    success
+					    {
+						    echo 'Image Pushed to Docker hub succeeded !'
+					    }
+				    }           		      
+			    }	    
+		    }   
 	    }
     }
-}
