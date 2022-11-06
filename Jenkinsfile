@@ -23,7 +23,7 @@ pipeline {
 			{
 			    echo 'Git project recovered with success !'
 			    echo 'Build Start ...'
-			    sh "mvn clean install -DskipTests"
+			    sh "mvn clean package -DskipTests"
 			}
 
 			post
