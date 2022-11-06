@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @Api(tags = "Gestion des magasins")
 @RequestMapping("/magasin")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:8080")
 public class MagasinController {
 
 	@Autowired
@@ -27,7 +27,8 @@ public class MagasinController {
 	@GetMapping("/retrieve-magasin/{magasin-id}")
 	@ResponseBody
 	public Magasin retrieveMagasin(@PathVariable("magasin-id") Long magasinId) {
-		return magasinService.retrieveMagasin(magasinId);
+		Magasin ms = magasinService.retrieveMagasin(magasinId);
+		return ms;
 	}
 
 	@PostMapping("/add-magasin")

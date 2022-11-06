@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (correction suite au bilan SonarQube)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/entities/Magasin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/repositories/MagasinRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/services/IMagasinService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/services/MagasinServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/CategorieProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/CategorieProduitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FactureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FactureRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/FournisseurRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/OperateurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/OperateurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ProduitRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ProduitRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ReglementRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/ReglementRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/SecteurActiviteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/SecteurActiviteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/StockRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/StockRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/controllers/MagasinController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667673714939</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated Spring boot (correction suite au bilan SonarQube)">
+      <created>1667763199539</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667763199539</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
