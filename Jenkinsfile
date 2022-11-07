@@ -8,7 +8,7 @@ pipeline {
                 url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
             }
         }
-        stage('Build') {
+        stage('Cleaning the project') {
             steps {
                 echo 'Cleaning project ...'
                 sh 'mvn clean'
@@ -16,5 +16,11 @@ pipeline {
                 sh 'mvn -version'
             }
         }
+        stage('Artifact construction') {
+        steps {
+                echo 'Artifact construction ...'
+                sh 'mvn package'
+            }
+    }
     }
 }
