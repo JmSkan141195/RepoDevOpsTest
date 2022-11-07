@@ -89,7 +89,7 @@ pipeline {
         {
             steps
             {
-                sh 'docker build -t tpachatprojet/alpine:latest .'
+                sh 'docker build -t dante7400/tpachatprojet:latest .'
             }
         }
 
@@ -98,7 +98,8 @@ pipeline {
             steps
             {
                 sh 'docker login -u $dockerhub_USR -p $dockerhub_PSW'
-                sh 'docker push tpachatprojet/alpine:latest'
+		sh 'docker tag tpachatprojet dante7400/tpachatprojet:latest'
+                sh 'docker push dante7400/tpachatprojet:latest'
             }
             post
             {
