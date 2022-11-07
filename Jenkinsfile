@@ -89,7 +89,7 @@ pipeline {
         {
             steps
             {
-                sh 'docker build -t tpAchatProjet/alpine:latest'
+                sh 'docker build -t tpachatprojet/alpine:latest'
             }
         }
 
