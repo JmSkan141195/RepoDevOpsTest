@@ -4,7 +4,7 @@ pipeline {
     environment{
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "192.168.1.24:8081/"
+        NEXUS_URL = "192.168.1.25:8081/"
         NEXUS_REPOSITORY = "maven_releases"
         NEXUS_CREDENTIAL_ID = "nexus_user_credentials"
         dockerhub = credentials('dockerhub')
@@ -27,13 +27,13 @@ pipeline {
     stage('sonarqube') {
         steps {
                 echo 'Sonar check ...'
-                sh 'mvn sonar:sonar -Dsonar.sources=src/main/java -Dsonar.java.binaries=target/classes -Dsonar.css.node=. -Dsonar.host.url=http://192.168.1.24:9000 -Dsonar.projectKey=tn.esprit.spring -Dsonar.login=admin -Dsonar.password=NocturneOp32'
+                sh 'mvn sonar:sonar -Dsonar.sources=src/main/java -Dsonar.java.binaries=target/classes -Dsonar.css.node=. -Dsonar.host.url=http://192.168.1.25:9000 -Dsonar.projectKey=tn.esprit.spring -Dsonar.login=admin -Dsonar.password=NocturneOp32'
             }
     }
     stage('nexus') {
         steps {
                 echo 'Nexus ...'
-                sh 'mvn deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=tpAchatProject -Dversion=1.0 -DgenerationPom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.1.24:8081/repository/maven-releases -Dfile=target/SpringProject-1.0.jar'
+                sh 'mvn deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=tpAchatProject -Dversion=1.0 -DgenerationPom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.1.25:8081/repository/maven-releases -Dfile=target/SpringProject-1.0.jar'
             }
     }
     stage('Login to Docker Hub') {
