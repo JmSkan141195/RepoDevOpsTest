@@ -15,6 +15,7 @@ pipeline {
         stage('Building JAR') {
             steps {
                 echo 'Building with Maven'
+                sh 'mvn dependency:purge-local-repository'
                 sh 'mvn clean install -DskipTests'
             }
         }
