@@ -27,6 +27,12 @@ pipeline {
                 sh 'mvn clean install -DskipTests'
             }
     }
+    stage('Junit') {
+            steps {
+                echo 'Testing CategorieProd'
+                sh 'mvn test'
+            }
+        }
     stage('sonarqube') {
         steps {
                 echo 'Sonar check ...'
