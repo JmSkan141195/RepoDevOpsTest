@@ -165,5 +165,22 @@ pipeline {
 			    }
 		    } 
 	    }
+	    /*stage ('Nexus Deploy')
+	    {
+		    steps
+		    {
+			   echo 'Starting deployment on Nexus Server'
+			    sh "mvn deploy" 
+		    }
+		    post
+		    {
+			    success
+			    {
+				    echo 'Deployment succeeded !'
+			    }
+		    } 
+	    }*/
+	    
+	    
     }
 }
