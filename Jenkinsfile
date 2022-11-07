@@ -8,18 +8,11 @@ pipeline {
                 url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
             }
         }
-        stage('Cleaning the project') {
-            steps {
-                echo 'Cleaning project ...'
-                sh 'mvn clean'
-                echo 'Maven version'
-                sh 'mvn -version'
-            }
-        }
+        
         stage('Artifact construction') {
         steps {
                 echo 'Artifact construction ...'
-                sh 'mvn package'
+                sh 'mvn clean install -DskipTests'
             }
     }
     stage('Code quality check via sonarqube') {
