@@ -124,7 +124,7 @@ pipeline {
 	    
 	    
 	    
-	    /*stage ('Build Image - Docker')
+	    stage ('Build Image - Docker')
 	    {
 		    steps
 		    {
@@ -160,6 +160,6 @@ pipeline {
 				    echo 'Image Pushed to Docker hub succeeded !'
 			    }
 		    } 
-	    }*/
+	    }
     }
 }
