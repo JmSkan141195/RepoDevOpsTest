@@ -59,6 +59,7 @@ pipeline {
 				    withSonarQubeEnv('SonarQubeServer')
 				    {
 					    sh "mvn sonar:sonar"
+					    jacoco()
 				    }
 			    }
 		    }
