@@ -10,7 +10,7 @@ pipeline {
     
     environment
     {
-        dockerhub-credentials = credentials('omar-dockerhub')
+        dockerhub = credentials('omar-dockerhub')
     }
 
     stages
@@ -97,7 +97,7 @@ pipeline {
         {
             steps
             {
-                sh 'echo $dockerhub-credentials_PSW | docker login -u $dockerhub-credentials_USR --password-stdin'
+                sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
                 sh 'docker push tpAchatProjet/alpine:latest'
             }
             post
