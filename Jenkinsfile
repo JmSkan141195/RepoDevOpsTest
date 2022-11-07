@@ -98,7 +98,7 @@ pipeline {
             steps
             {
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
-                sh 'docker push tpAchatProjet/alpine:latest'
+                sh 'docker push tpachatprojet/alpine:latest'
             }
             post
             {
