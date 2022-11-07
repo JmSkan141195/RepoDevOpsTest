@@ -165,7 +165,7 @@ pipeline {
 			    }
 		    } 
 	    }
-	    /*stage ('Nexus Deploy')
+	    stage ('Nexus Deploy')
 	    {
 		    steps
 		    {
@@ -179,7 +179,7 @@ pipeline {
 				    echo 'Deployment succeeded !'
 			    }
 		    } 
-	    }*/
+	    }
 	    
 	    
     }
