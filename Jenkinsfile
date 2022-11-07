@@ -10,8 +10,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "Building"
-                sh 'mvn clean install -DskipTests'
+                echo 'Cleaning project ...'
+                sh 'mvn clean'
+                echo 'Maven version'
+                sh 'mvn -version'
             }
         }
     }
