@@ -1,1 +1,22 @@
-
+pipeline {
+    agent any
+    tools {
+        jdk 'JAVA_HOME'
+        maven 'M2_HOME'
+    }
+    stages {
+        stage('GIT') {
+            steps {
+                echo 'Pulling code from Git'
+                git branch: 'MouhebSliti', 
+                url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
+            }
+        }
+        stage('Building') {
+            steps {
+                echo 'Building with Maven'
+                sh 'mvn clean install -DskipTests'
+            }
+        }
+    }
+}
