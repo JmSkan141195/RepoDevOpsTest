@@ -98,7 +98,7 @@ pipeline {
             steps
             {
                 sh 'docker login -u $dockerhub_USR -p $dockerhub_PSW'
-		sh 'docker tag tpachatprojet dante7400/tpachatprojet:latest'
+		sh 'docker tag a45a54d0585d dante7400/tpachatprojet:latest'
                 sh 'docker push dante7400/tpachatprojet:latest'
             }
             post
