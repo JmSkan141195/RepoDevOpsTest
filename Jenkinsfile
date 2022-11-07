@@ -18,5 +18,11 @@ pipeline {
                 sh 'mvn clean install -DskipTests'
             }
         }
+        stage('SonarQube') {
+            steps {
+                echo 'SonarQube'
+                sh 'mvn sonar:sonar -Dsonar.login=8201febc1c220f337223156baef397799143a4fb'
+            }
+        }
     }
 }
