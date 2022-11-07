@@ -1,4 +1,5 @@
 pipeline {
+	
     agent any
 	
     tools
@@ -47,6 +48,7 @@ pipeline {
                     			echo 'Compilation Completed with Success ...'
 				}
 		    	}
+		    
 	    }
 	    stage ('SonarQube Code Quality Check')
 	    {
@@ -94,7 +96,8 @@ pipeline {
 		    steps
 		    {
 		        echo 'Unit Tests Start ...'
-		        sh "mvn test"
+		        //sh "mvn test"
+			    echo 'nothing to do yet'
 		    }
 
 		    post
@@ -162,5 +165,22 @@ pipeline {
 			    }
 		    } 
 	    }
+	    /*stage ('Nexus Deploy')
+	    {
+		    steps
+		    {
+			   echo 'Starting deployment on Nexus Server'
+			    sh "mvn deploy" 
+		    }
+		    post
+		    {
+			    success
+			    {
+				    echo 'Deployment succeeded !'
+			    }
+		    } 
+	    }*/
+	    
+	    
     }
 }
