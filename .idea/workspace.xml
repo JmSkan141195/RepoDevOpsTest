@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (JUnit tests : Operateur unit tests)">
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (added surefire plugin or tests)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -368,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667818478544</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Updated Spring boot (added surefire plugin or tests)">
+      <created>1667831401966</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1667831401966</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +409,8 @@
     <MESSAGE value="Updated Spring boot (maven-surefire-plugin)" />
     <MESSAGE value="Updated Spring boot (JUnit tests)" />
     <MESSAGE value="Updated Spring boot (JUnit tests : Operateur unit tests)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (JUnit tests : Operateur unit tests)" />
+    <MESSAGE value="Updated Spring boot (added surefire plugin or tests)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (added surefire plugin or tests)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
