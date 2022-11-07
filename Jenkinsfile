@@ -48,7 +48,7 @@ pipeline {
 				}
 		    	}
 	    }
-	    /*stage ('SonarQube Code Quality Check')
+	    stage ('SonarQube Code Quality Check')
 	    {
 		    steps
 		    {
@@ -67,7 +67,7 @@ pipeline {
                     			echo 'Compilation Completed with Success ...'
 				}
 		    	}
-	    }*/
+	    }
 	    
 	    
 	    
