@@ -18,5 +18,13 @@ pipeline {
                 sh 'mvn clean install -DskipTests'
             }
         }
+        stage('MVN SONARQUBE')
+        {
+            steps{
+                echo 'Building with Maven'
+                sh "mvn sonar:sonar -Dsonar.login=aeacb699c1f339cd5ebcf85085653179788baab5"
+
+            }
+        }
     }
 }
