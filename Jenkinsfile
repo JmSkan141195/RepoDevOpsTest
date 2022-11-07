@@ -7,6 +7,11 @@ pipeline {
 		maven 'M2_HOME'
 		jdk 'JAVA_HOME'
 	}
+    
+    environment
+    {
+        dockerhub-credentials = credentials('omar-dockerhub')
+    }
 
     stages
     {
@@ -77,6 +82,27 @@ pipeline {
                 {
                     echo 'Build Completed with Success ...'
                 }
+            }
+        }
+
+        stage ('Build Image Docker')
+        {
+            steps
+            {
+                sh 'docker build -t tpAchatProjet/alpine:latest'
+            }
+        }
+
+        stage ('Push Image')
+        {
+            steps
+            {
+                sh 'echo $dockerhub-credentials_PSW | docker login -u $dockerhub-credentials_USR --password-stdin'
+                sh 'docker push tpAchatProjet/alpine:latest'
+            }
+            post
+            {
+                sh 'docker logout'
             }
         }
 
