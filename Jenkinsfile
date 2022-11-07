@@ -1,27 +1,18 @@
-pipeline 
-{
-    agent  any 
-    tools  { 
-        maven 'M2_HOME'  
-        
-    } 
-    
- 
+pipeline {
+    agent any
     stages {
-        stage('Getting project from git') {
+        stage('GIT Checkout') {
             steps {
-                echo 'Project is downloading ...'
-                git branch:'youssefgaaieb',url:'https://github.com/JmSkan141195/RepoDevOpsTest.git'
-
+                echo 'Pulling code from Git'
+                git branch: 'youssefgaaieb', 
+                url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
             }
-
-        stage('test')  {
-            steps{
-                 echo 'hello '   
+        }
+        stage('Build') {
+            steps {
+                echo "Building"
+                sh 'date'
             }
-        }  
+        }
     }
-
-    }
-        
 }
