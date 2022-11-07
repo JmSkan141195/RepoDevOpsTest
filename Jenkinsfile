@@ -8,7 +8,7 @@ pipeline {
         stage('GIT Checkout') {
             steps {
                 echo 'Pulling code from Git'
-                git branch: 'medwassimhabibi', 
+                git branch: 'OmarNaffeti', 
                 url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
             }
         }
