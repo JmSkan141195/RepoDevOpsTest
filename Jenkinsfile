@@ -1,5 +1,13 @@
 pipeline {
-    agent any
+    agent 
+    
+    environment{
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "192.168.1.24:8081/"
+        NEXUS_REPOSITORY = "maven_releases"
+        NEXUS_CREDENTIAL_ID = "nexus_user_credentials"
+    }
     stages {
         stage('Download project') {
             steps {
