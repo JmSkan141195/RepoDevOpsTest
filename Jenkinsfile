@@ -96,7 +96,8 @@ pipeline {
 		    steps
 		    {
 		        echo 'Unit Tests Start ...'
-		        sh "mvn test"
+		        //sh "mvn test"
+			    echo 'nothing to do yet'
 		    }
 
 		    post
