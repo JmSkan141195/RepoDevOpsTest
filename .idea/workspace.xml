@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (JUnit tests)">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/StockServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/esprit/examen/services/OperateurServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/examen/entities/Operateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/examen/entities/Operateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +52,15 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/sirin/Desktop/tpAchatProject",
+    "last_opened_file_path": "D:/testDevOps/RepoDevOpsTest/src/test/java/com/esprit/examen/services",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\testDevOps\RepoDevOpsTest\src\test\java\com\esprit\examen\services" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.esprit.examen.controllers" />
       <recent name="com.esprit.examen.services" />
@@ -66,8 +71,9 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleJUnitTest.test_JUnit">
-    <configuration name="SimpleJUnitTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OperateurServiceImplTest.testAddOperateur">
+    <configuration name="OperateurServiceImplTest.testAddOperateur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepoDevOpsTest" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.esprit.examen.services.*" />
@@ -75,8 +81,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
-      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.SimpleJUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.OperateurServiceImplTest" />
+      <option name="METHOD_NAME" value="testAddOperateur" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OperateurServiceImplTest.testAddOperateur" />
         <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit" />
         <item itemvalue="JUnit.StockServiceImplTest.testAddStock" />
         <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit (1)" />
         <item itemvalue="JUnit.SimpleJUnitTest" />
-        <item itemvalue="JUnit.SimpleJUnitTest (1)" />
       </list>
     </recent_temporary>
   </component>
