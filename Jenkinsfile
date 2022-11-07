@@ -36,7 +36,7 @@ pipeline {
     stage('nexus') {
         steps {
                 echo 'Nexus ...'
-                sh 'mvn deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=tpAchatProject -Dversion=1.0 -DgenerationPom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.33.10:8081/repository/maven-releases -Dfile=target/SpringProject-1.0.jar'
+                sh 'mvn deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=tpAchatProject -Dversion=1.0 -DgenerationPom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.33.10:8081/repository/maven-releases -Dfile=target/tpAchatProject-1.0.jar'
             }
     }
     stage('Login to Docker Hub') {
