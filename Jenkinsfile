@@ -13,19 +13,6 @@ pipeline {
         PATH = "/usr/share/maven:$PATH"
 	dockerhub = credentials('dockerhub')
     }
-
-	stages {
-        stage('Status and Mail Notification !') {
-            steps {
-                echo "Ok"
-            }
-        }
-    }
-    post {
-        always {
-            emailext body: 'This is a Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-        }
-    }
     
 
     stages
