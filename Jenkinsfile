@@ -15,7 +15,7 @@ pipeline {
 
     stages {
         
-        stage('Ok') {
+        stage('Email Send') {
             steps {
                 echo "Ok"
             }
@@ -34,7 +34,7 @@ pipeline {
             }
         }
         
-        stage('Building') {
+        stage('Build') {
             steps {
                 echo 'Building with Maven'
                 sh 'mvn clean install -DskipTests'
@@ -82,7 +82,7 @@ pipeline {
             }
         }
 
-         stage ('Pushing Image - Docker'){
+         stage ('Docker Push'){
             steps
             {
                 sh "docker push mouhebsliti36/devopsapp"
