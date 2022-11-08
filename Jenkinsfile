@@ -26,7 +26,7 @@ pipeline {
         }
         stage('JUnit') {
             steps {
-                echo 'Testing'
+                echo 'Testing Facture Services'
                 sh 'mvn test'
             }
         }
