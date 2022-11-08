@@ -50,6 +50,43 @@ pipeline {
 		    	}
 		    
 	    }
+		
+		stage ('Building ...')
+		{
+			steps
+			{
+			    echo 'Build Start ...'
+			    sh "mvn package -Dmaven.main.skip -DskipTests"
+			}
+
+			post
+			{
+				success
+                		{
+                    			echo 'Build Completed with Success ...'
+				}
+		    	}
+		}
+		
+		stage ('Unit Tests ...')
+		{
+		    steps
+		    {
+		        echo 'Unit Tests Start ...'
+		        sh "mvn test"
+			    echo 'nothing to do yet'
+		    }
+
+		    post
+		    {
+		        success
+		        {
+		            echo 'Unit Tests Complete ...'
+		        }
+		    }
+		}
+		
+		
 	    stage ('SonarQube Code Quality Check')
 	    {
 		    steps
@@ -67,48 +104,31 @@ pipeline {
 			{
 				success
                 		{
-                    			echo 'Compilation Completed with Success ...'
+                    			echo 'SonarQube Scan Completed with Success ...'
 				}
 		    	}
 	    }
 	    
 	    
-	    
-	    
-        stage ('Building ...')
-		{
-			steps
-			{
-			    echo 'Build Start ...'
-			    sh "mvn package -Dmaven.main.skip -DskipTests"
-			}
-
-			post
-			{
-				success
-                		{
-                    			echo 'Build Completed with Success ...'
-				}
-		    	}
-		}
-	 
-	stage ('Unit Tests ...')
-		{
+	    stage ('Nexus Deploy')
+	    {
 		    steps
 		    {
-		        echo 'Unit Tests Start ...'
-		        sh "mvn test"
-			    echo 'nothing to do yet'
+			   echo 'Starting deployment on Nexus Server'
+			    sh "mvn deploy" 
 		    }
-
 		    post
 		    {
-		        success
-		        {
-		            echo 'Unit Tests Complete ...'
-		        }
-		    }
-		}
+			    success
+			    {
+				    echo 'Deployment succeeded !'
+			    }
+		    } 
+	    }
+	    
+        
+	 
+	
 	    
 	    
 	    stage('Login to Docker Hub') 
@@ -162,21 +182,7 @@ pipeline {
 			    }
 		    } 
 	    }
-	    stage ('Nexus Deploy')
-	    {
-		    steps
-		    {
-			   echo 'Starting deployment on Nexus Server'
-			    sh "mvn deploy" 
-		    }
-		    post
-		    {
-			    success
-			    {
-				    echo 'Deployment succeeded !'
-			    }
-		    } 
-	    }
+	    
 	    
 	    
     }
