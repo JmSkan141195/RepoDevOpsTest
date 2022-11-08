@@ -59,12 +59,18 @@ pipeline {
             
         }
 
-        stage('MVN SONARQUBE')
+        stage('SONARQUBE test')
         {
             steps{
 
                 sh "mvn sonar:sonar -Dsonar.login=da678e3bd5b193d0ef6c1b255a04816dd3b452a3"
 
+            }
+        }
+	    
+	stage('Tests unitaires') {
+            steps {
+                sh 'mvn test'
             }
         }
         
