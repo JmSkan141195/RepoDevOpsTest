@@ -21,13 +21,14 @@ pipeline {
             steps {
                 echo "Ok"
             }
-                             }
+                            
     
-    post {
+                post {
         always {
             emailext body: 'This is an automated email! PipeLine build started -Mouheb Sliti', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Jenkins Mail'
         }
     }
+        }
         
         stage('Download') {
             steps {
