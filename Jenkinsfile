@@ -95,6 +95,7 @@ pipeline {
         {
             steps
             {
+		sh 'sudo su'
 		sh 'docker login -u $dockerhub_USR -p $dockerhub_PSW'
                 sh 'docker build -t dante7400/tpachatprojet:latest .'
             }
