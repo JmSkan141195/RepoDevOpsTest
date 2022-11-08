@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (added surefire plugin or tests)">
+    <list default="true" id="53fbe762-f626-44e2-973e-7753e035c2c1" name="Changes" comment="Updated Spring boot (setup nexus)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -52,6 +52,9 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "D:/testDevOps/RepoDevOpsTest/src/test/java/com/esprit/examen/services",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
@@ -70,7 +73,22 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OperateurServiceImplTest.testAddOperateur">
+  <component name="RunManager" selected="JUnit.OperateurServiceImplTest">
+    <configuration name="OperateurServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RepoDevOpsTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esprit.examen.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
+      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.OperateurServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OperateurServiceImplTest.testAddOperateur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RepoDevOpsTest" />
       <extension name="coverage">
@@ -83,21 +101,6 @@
       <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.OperateurServiceImplTest" />
       <option name="METHOD_NAME" value="testAddOperateur" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleJUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RepoDevOpsTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.esprit.examen.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.esprit.examen.services" />
-      <option name="MAIN_CLASS_NAME" value="com.esprit.examen.services.SimpleJUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OperateurServiceImplTest" />
         <item itemvalue="JUnit.OperateurServiceImplTest.testAddOperateur" />
         <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit" />
         <item itemvalue="JUnit.StockServiceImplTest.testAddStock" />
         <item itemvalue="JUnit.SimpleJUnitTest.test_JUnit (1)" />
-        <item itemvalue="JUnit.SimpleJUnitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -375,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667831401966</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updated Spring boot (setup nexus)">
+      <created>1667833998947</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667833998947</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,9 +420,13 @@
     <MESSAGE value="Updated Spring boot (JUnit tests)" />
     <MESSAGE value="Updated Spring boot (JUnit tests : Operateur unit tests)" />
     <MESSAGE value="Updated Spring boot (added surefire plugin or tests)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (added surefire plugin or tests)" />
+    <MESSAGE value="Updated Spring boot (setup nexus)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Spring boot (setup nexus)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RepoDevOpsTest$OperateurServiceImplTest.ic" NAME="OperateurServiceImplTest Coverage Results" MODIFIED="1667855419077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.esprit.examen.services.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SpringBootWithUnitTestApplicationTests_ajouterMagasinTest.ic" NAME="SpringBootWithUnitTestApplicationTests.ajouterMagasinTest Coverage Results" MODIFIED="1667757083068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RepoDevOpsTest$SimpleJUnitTest.ic" NAME="SimpleJUnitTest Coverage Results" MODIFIED="1665097051621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.esprit.examen.services.*</FILTER>
