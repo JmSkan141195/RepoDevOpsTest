@@ -18,6 +18,14 @@ target/
 *.iws
 *.iml
 *.ipr
+.classpath
+.mvn/
+.project
+.settings/
+.springBeans
+HELP.md
+mvnw
+mvnw.cmd
 
 ### NetBeans ###
 /nbproject/private/
