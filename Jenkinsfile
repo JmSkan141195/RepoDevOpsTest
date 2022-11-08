@@ -1,9 +1,11 @@
 pipeline {
     agent any
+    
     tools {
         jdk 'JAVA_HOME'
         maven 'M2_HOME'
-    }
+        }
+
      environment{
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
@@ -11,7 +13,7 @@ pipeline {
         NEXUS_REPOSITORY = "maven_releases"
         NEXUS_CREDENTIAL_ID = "nexus_user_credentials"
         dockerhub = credentials('dockerhub')
-    }
+              }
 
     stages {
         
@@ -19,12 +21,13 @@ pipeline {
             steps {
                 echo "Ok"
             }
-        }
-    }
+                             }
+    
     post {
         always {
-            emailext body: 'This is an automated email! PipeLine build started -Mouheb Sliti', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            emailext body: 'This is an automated email! PipeLine build started -Mouheb Sliti', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Jenkins Mail'
         }
+    }
         
         stage('Download') {
             steps {
