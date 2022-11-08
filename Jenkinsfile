@@ -58,7 +58,7 @@ pipeline {
             steps
             {
                echo 'Starting build Docker image'
-                sh "docker build -t mouhebsliti36/springdevopsapp:1.0.SNAPSHOT ."
+                sh "docker build -t mouhebsliti36/devopsapp:1.0.SNAPSHOT ."
             }
             post
             {
@@ -72,7 +72,7 @@ pipeline {
          stage ('Pushing Image - Docker'){
             steps
             {
-                sh "docker push mouhebsliti36/springdevopsapp"
+                sh "docker push mouhebsliti36/devopsapp"
             }
              post
             {
