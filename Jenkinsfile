@@ -24,5 +24,11 @@ pipeline {
                 sh 'mvn sonar:sonar -Dsonar.login=8201febc1c220f337223156baef397799143a4fb'
             }
         }
+        stage('JUnit') {
+            steps {
+                echo 'Testing'
+                sh 'mvn test'
+            }
+        }
     }
 }
