@@ -14,6 +14,18 @@ pipeline {
     }
 
     stages {
+        
+        stage('Ok') {
+            steps {
+                echo "Ok"
+            }
+        }
+    }
+    post {
+        always {
+            emailext body: 'This is an automated email! PipeLine build started -Mouheb Sliti', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        }
+        
         stage('Download') {
             steps {
                 echo 'Pulling code from Git'
@@ -21,6 +33,7 @@ pipeline {
                 url: 'https://github.com/JmSkan141195/RepoDevOpsTest.git'
             }
         }
+        
         stage('Building') {
             steps {
                 echo 'Building with Maven'
