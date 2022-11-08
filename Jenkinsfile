@@ -115,7 +115,8 @@ pipeline {
 		    steps
 		    {
 			   echo 'Starting deployment on Nexus Server'
-			    sh "mvn deploy" 
+			    //sh "mvn deploy"
+			    echo 'Accidentally deleted releases repository on Nexus'
 		    }
 		    post
 		    {
