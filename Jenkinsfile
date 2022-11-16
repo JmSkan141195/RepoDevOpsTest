@@ -74,7 +74,6 @@ pipeline {
 		    {
 		        echo 'Unit Tests Start ...'
 		        sh "mvn test"
-			    echo 'nothing to do yet'
 		    }
 
 		    post
@@ -86,52 +85,6 @@ pipeline {
 		    }
 		}
 		
-		
-	    stage ('SonarQube Code Quality Check')
-	    {
-		    steps
-		    {
-			    script
-			    {
-				    withSonarQubeEnv('SonarQubeServer')
-				    {
-					    sh "mvn sonar:sonar"
-					    //jacoco()
-				    }
-			    }
-		    }
-		    post
-			{
-				success
-                		{
-                    			echo 'SonarQube Scan Completed with Success ...'
-				}
-		    	}
-	    }
-	    
-	    
-	    stage ('Nexus Deploy')
-	    {
-		    steps
-		    {
-			   echo 'Starting deployment on Nexus Server'
-			    sh "mvn deploy"
-			    echo 'Accidentally deleted releases repository on Nexus'
-		    }
-		    post
-		    {
-			    success
-			    {
-				    echo 'Deployment succeeded !'
-			    }
-		    } 
-	    }
-	    
-        
-	 
-	
-	    
-	    
 	    stage('Login to Docker Hub') 
 	    {      	
     		steps
